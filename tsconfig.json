@@ -1,0 +1,14 @@
+﻿{
+  "compilerOptions": {
+    "declaration": false,
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "moduleResolution": "node"
+ },
+  "compileOnSave": true,
+  "exclude": [
+    "build"
+  ]
+}

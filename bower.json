@@ -1,0 +1,35 @@
+{
+  "name": "lss-inject",
+  "version": "1.0.0",
+  "description": "Poor man's denpendency injection for polymer",
+  "authors": [
+    "Leavitt Software Solutions"
+  ],
+  "keywords": [
+    "polymer",
+    "leavitt software",
+    "lss"
+  ],
+  "main": "lss-requestor-behavior.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LssPolymerElements/lss-inject.git"
+  },
+  "license": "https://opensource.org/licenses/MIT",
+  "homepage": "https://github.com/LssPolymerElements/lss-inject",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "package.json",
+    "tsconfig.json",
+    ".gitignore",
+    ".vscode"],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0",
+    "polymer-ts": "^0.1.26"   
+  },
+  "devDependencies": {
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  }
+}
