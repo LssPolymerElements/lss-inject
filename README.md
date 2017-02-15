@@ -9,7 +9,7 @@ To install use: `bower install --save lss-inject`
 
 ## Senario:
 
-<pre>
+```
 ---app-main
     --my-parent-component  <-- PROVIDER of user-manager.  user-manager lives in this component.
        -user-manager
@@ -23,7 +23,7 @@ To install use: `bower install --save lss-inject`
           -component-f
      --my-faq
      --my-feedback
-   </pre>
+```
        
 ## How to use:
 
