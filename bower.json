@@ -7,16 +7,15 @@
   ],
   "keywords": [
     "polymer",
-    "leavitt software",
-    "lss"
+    "Polymer Dependency Injection",
+    "Dependency Injection"
   ],
   "main": "lss-requestor-behavior.html",
   "repository": {
     "type": "git",
     "url": "git://github.com/LssPolymerElements/lss-inject.git"
   },
-  "license": "https://opensource.org/licenses/MIT",
-  "homepage": "https://github.com/LssPolymerElements/lss-inject",
+  "license": "MIT",
   "ignore": [
     "node_modules",
     "bower_components",
@@ -25,11 +24,11 @@
     ".gitignore",
     ".vscode"],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.1.0",
-    "polymer-ts": "^0.1.26"   
+    "polymer": "Polymer/polymer#^1.1.0"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+    "polymer-ts": "^0.1.26"   
   }
 }
