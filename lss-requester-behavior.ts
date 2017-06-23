@@ -1,6 +1,6 @@
-﻿var LssRequesterBehavior = (superClass) => {
+﻿var LssRequesterBehavior = (superClass: any) => {
     return class extends superClass {
-        private requestProvider(key) {
+        private requestProvider(key: string) {
             const event = new CustomEvent("request-provider", {
                 detail: { key },
                 bubbles: true,
@@ -15,11 +15,11 @@
             }
         };
 
-        requestInstance(key) {
+        requestInstance(key: string) {
             return this.requestProvider(key)();
         };
 
-        private value(key) {
+        private value(key: string) {
             return () => this.requestInstance(key);
         };
     }

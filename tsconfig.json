@@ -1,14 +1,19 @@
 ﻿{
   "compilerOptions": {
-    "declaration": false,
-    "module": "commonjs",
-    "target": "es5",
-    "noImplicitAny": false,
+    "target": "es2015",
     "experimentalDecorators": true,
-    "moduleResolution": "node"
- },
+    "emitDecoratorMetadata": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "sourceMap": false,
+    "lib": ["es2017", "dom"],
+    "typeRoots": ["types"]
+  },
   "compileOnSave": true,
   "exclude": [
-    "build"
+    "build",
+    "node_modules",
+    "bower_components/reflect-metadata/"
   ]
 }

@@ -1,9 +1,8 @@
-﻿var LssProviderBehavior = (superClass) => {
+﻿var LssProviderBehavior = (superClass: any) => {
     return class extends superClass {
-        connectedCallback() {
-            if (super.connectedCallback) {
-                super.connectedCallback();
-            }
+        ready() {
+            if (super.ready)
+                super.ready();
 
             this.providers = {};
             window.addEventListener("request-provider", (event: CustomEvent) => {
@@ -17,11 +16,11 @@
         }
 
         providers: any;
-        provide(key, factory) {
+        provide(key: string, factory: any) {
             this.providers[key] = factory;
         };
 
-        provideInstance(key, instance) {
+        provideInstance(key: string, instance: any) {
             this.providers[key] = () => instance;
         };
     }
