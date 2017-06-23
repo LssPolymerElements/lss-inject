@@ -1,31 +1,29 @@
 {
   "name": "lss-inject",
-  "version": "1.0.0",
-   "keywords": [
-    "polymer",
-    "Polymer Dependency Injection",
+  "version": "2.0.0",
+  "keywords": [
+    "polymer 2",
+    "Polymer 2 Dependency Injection",
     "Dependency Injection",
-    "Polymer Typescript"
+    "Polymer 2 Typescript"
   ],
   "authors": [
     "Aaron Drabeck <aaron-drabeck@leavitt.com>"
   ],
   "main": "lss-requestor-behavior.html",
-  "description": "Poor man's denpendency injection for polymer",
-  "license": "MIT", 
+  "description": "Poor mans dependency injection for polymer",
+  "license": "MIT",
   "ignore": [
     "node_modules",
     "bower_components",
     "package.json",
     "tsconfig.json",
     ".gitignore",
-    ".vscode"],
-  "dependencies": {
-    "polymer": "Polymer/polymer#^1.1.0"
-  },
+    ".vscode"
+  ],
+  "dependencies": {},
   "devDependencies": {
-    "web-component-tester": "^4.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
-    "polymer-ts": "^0.1.26"   
+    "web-component-tester": "^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
   }
 }
