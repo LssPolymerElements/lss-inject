@@ -31,13 +31,11 @@ In this example we have a single instance component that is called user-manager 
        
 ### 1. Provide your component in any parent component
 ```typescript
-@behavior(LssProviderBehavior)
-@component("my-parent-component")
-class MyParentComponent extends polymer.Base {
-    provideInstance: (key: string, any) => void;   // stand-in properties for behavior mixins 
-
+class MyParentComponent extends LssProviderBehavior(Polymer.Element) {
+  
     ready() {
-             this.provideInstance("UserManager", this.$.userManager);
+        super.ready();    
+        this.provideInstance("UserManager", this.$.userManager);
     }
 }
 ```
@@ -45,13 +43,34 @@ class MyParentComponent extends polymer.Base {
 
 ### 2. Request your component from any child component
 ```typescript
-@behavior(LssRequesterBehavior)
-@component("my-child-component")
-class MyChildComponent extends polymer.Base {
-    requestInstance: (key: string) => any; // stand-in properties for behavior mixins 
-
-    attached() {
-         this.userManager = this.requestInstance("UserManager");
+class MyChildComponent extends LssRequesterBehavior(Polymer.Element) {
+    connectedCallback() {
+         super.connectedCallback();
+         var userManager = this.requestInstance("UserManager");
+         userManager.ensureLoggedIn().
     }
+}
+```
+
+
+### Be both a requester and provider
+```typescript
+class MyComponent extends LssProviderBehavior(LssRequesterBehavior(Polymer.Element)) {
+   ready() {
+        super.ready();    
+        this.provideInstance("MyComponent", this);
+   }
+   
+   connectedCallback() {
+         super.connectedCallback();
+         var userManager = this.requestInstance("UserManager");
+         userManager.ensureLoggedIn().
+   }
+   
+   onLogoutButtonClick(){
+        var userManager = this.requestInstance("UserManager");
+        if(userManager) 
+            userManager.logout().
+   }
 }
 ```
